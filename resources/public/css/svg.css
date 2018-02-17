@@ -1,3 +1,8 @@
 #Warstwa_1 {
     fill: #fff;
 }
+
+#Warstwa_1:hover {
+    fill: #ccc;
+    cursor: pointer;
+}

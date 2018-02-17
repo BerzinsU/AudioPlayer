@@ -13,12 +13,12 @@
    "00:34"])
 
 (defn song-title []
-  [:div {:style {:font-size   14
+  [:div {:style {:font-size   16
                  :line-height "22px"}}
    "Mazurka in D major, B. 71"])
 
 (defn author []
-  [:div {:style {:font-size   13
+  [:div {:style {:font-size   15
                  :font-weight 100}}
    "Frédéric Chopin"])
 
@@ -62,7 +62,7 @@
                  :flex-direction  :column
                  :align-items     :center
                  :justify-content :center
-                 :margin          "15px 10px"}}
+                 :margin          "18px 10px"}}
    [song-info]])
 
 (defn outer-circle []
@@ -78,7 +78,8 @@
                  :align-items     :center
                  :justify-content :center}}
    [playlist-btn]
-   [:div {:style {:display :flex}}
+   [:div {:style {:display     :flex
+                  :align-items :center}}
     [prev-btn]
     [inner-circle]
     [next-btn]]
