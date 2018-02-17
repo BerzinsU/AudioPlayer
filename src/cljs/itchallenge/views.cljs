@@ -7,7 +7,12 @@
     [:div "Hello from " @name]))
 
 (defn body []
-  [:div {:style {:position :relative}}
+  [:div {:style {:position        :absolute
+                 :width           "100%"
+                 :height          "100%"
+                 :display         :flex
+                 :align-items     :center
+                 :justify-content :center}}
    [title]])
 
 (defn background []
@@ -16,7 +21,8 @@
                    :background-size  :cover
                    :position         :absolute
                    :width            "100%"
-                   :height           "100%"}}]))
+                   :height           "100%"
+                   :filter           "grayscale(35%) brightness(60%) contrast(110%)"}}]))
 
 (defn main-panel []
   [:div

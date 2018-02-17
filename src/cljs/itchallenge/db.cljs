@@ -2,4 +2,4 @@
 
 (def default-db
   {:name "re-frame"
-   :background "backgrounds/6181316022_a513b78a87_o.jpg"})
+   :background "backgrounds/6284055448_e0d5c1af67_o.jpg"})
