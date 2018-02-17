@@ -1,10 +1,7 @@
 (ns itchallenge.views
   (:require [re-frame.core :as re-frame]
-            [itchallenge.subs :as subs]))
-
-(defn title []
-  (let [name (re-frame/subscribe [::subs/name])]
-    [:div "Hello from " @name]))
+            [itchallenge.subs :as subs]
+            [itchallenge.player.views :refer [player]]))
 
 (defn body []
   [:div {:style {:position        :absolute
@@ -13,7 +10,8 @@
                  :display         :flex
                  :align-items     :center
                  :justify-content :center}}
-   [title]])
+   ;[title]
+   [player]])
 
 (defn background []
   (let [current-background (re-frame/subscribe [::subs/background])]
@@ -26,6 +24,6 @@
                    :filter              "grayscale(35%) brightness(60%) contrast(110%)"}}]))
 
 (defn main-panel []
-  [:div
+  [:div {:style {:font-family "'Roboto', sans-serif"}}
    [background]
    [body]])
